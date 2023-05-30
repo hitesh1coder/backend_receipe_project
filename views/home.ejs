@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="/public//assets/css/Homestyles.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Total Receipes</h1>
+      <button class="create_btn">
+        <a href="/createreceipe">Create New</a>
+      </button>
+      <div class="receipe_container">
+        <% receipe.forEach((item,index)=>{ %>
+        <div class="main_section">
+          <p><%=1+ index %></p>
+          <p>
+            Receipe Name is :-
+            <span style="font-weight: bold"><%= item.receipeName %></span>
+          </p>
+          <p>
+            Total Time taken in this Receipe :-
+            <span style="font-weight: bold"><%= item.receipeTime %></span>
+          </p>
+          <p>
+            Ingredeints :-
+            <span style="font-weight: bold"><%= item.ingredeints %></span>
+          </p>
+          <p>
+            Serve person for :-
+            <span style="font-weight: bold"><%= item.serves %></span>
+          </p>
+          <div class="btns">
+            <button class="create_btn">
+              <a href="/update?id=<%= item._id%>">update</a>
+            </button>
+            <button class="create_btn">
+              <a href="/receipe/delete/<%= item._id%>">delete</a>
+            </button>
+          </div>
+
+          <!-- <a href="/receipe/delete/<%= item._id%>">delete</a> -->
+        </div>
+
+        <% }) %>
+      </div>
+    </div>
+  </body>
+</html>

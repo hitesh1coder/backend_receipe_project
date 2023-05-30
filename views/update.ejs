@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Receipe</title>
+    <link
+      rel="stylesheet"
+      href="/public//assets/css/styles.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main_section">
+        <h1>Update Your Receipe Deatils</h1>
+        <form action="/receipe/update/<%= doc._id%>" method="post">
+          <div class="form_section">
+            <input
+              type="text"
+              name="receipeName"
+              placeholder="Enter your Receipe Name"
+              class="input_field"
+              value="<%= doc.receipeName%>"
+            />
+            <input
+              type="text"
+              name="receipeTime"
+              placeholder="Enter time your Receipe will take"
+              class="input_field"
+              value="<%= doc.receipeTime%>"
+            />
+            <input
+              type="text"
+              name="ingredeints"
+              placeholder="enter ingredeints"
+              class="input_field"
+              value="<%= doc.ingredeints%>"
+            />
+            <input
+              type="text"
+              name="serves"
+              placeholder="total person serve for"
+              class="input_field"
+              value="<%= doc.serves%>"
+            />
+            <button class="button" type="submit">UPDATE</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

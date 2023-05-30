@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create New Receipe</title>
+    <link
+      rel="stylesheet"
+      href="/public//assets/css/styles.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="main_section">
+        <h1>Your Receipe Deatils</h1>
+        <form action="/receipe" method="post">
+          <div class="form_section">
+            <input
+              type="text"
+              name="receipeName"
+              class="input_field"
+              placeholder="Enter your Receipe Name"
+            />
+            <input
+              type="text"
+              name="receipeTime"
+              class="input_field"
+              placeholder="Enter time your Receipe will take"
+            />
+            <input
+              type="text"
+              name="ingredeints"
+              class="input_field"
+              placeholder="enter ingredeints"
+            />
+            <input
+              type="text"
+              name="serves"
+              class="input_field"
+              placeholder="serve for"
+            />
+            <button class="button" type="submit">submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
